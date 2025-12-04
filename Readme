@@ -1,1 +1,25 @@
 Kafka lessons
+
+in cmd - S:\kafka_2.13-2.5.0\kafka_2.13-2.5.0\bin\windows>
+
+Step1: .\zookeeper-server-start.bat ..\..\config\zookeeper.properties
+Step2: .\kafka-server-start.bat ..\..\config\server.properties
+
+# Now server is running
+
+
+
+Again open new cmd S:\kafka_2.13-2.5.0\kafka_2.13-2.5.0\bin\windows>
+
+Step3: .\kafka-topics.bat --create --topic TEST --bootstrap-server localhost:9092
+(to verify)  .\kafka-topics.bat --list --bootstrap-server localhost:9092
+(to delete) .\kafka-topics.bat --delete --topic TEST --bootstrap-server localhost:9092
+
+Step4:  .\kafka-console-producer.bat --broker-list localhost:9092 --topic test
+and write messages
+
+
+Again open new cmd S:\kafka_2.13-2.5.0\kafka_2.13-2.5.0\bin\windows>
+
+Step5: .\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test --from-beginning
+(we will  recieve messages here)
