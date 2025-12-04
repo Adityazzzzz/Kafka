@@ -1,6 +1,6 @@
 Kafka lessons
 
-in cmd - S:\kafka_2.13-2.5.0\kafka_2.13-2.5.0\bin\windows>
+in 2 different cmd - S:\kafka_2.13-2.5.0\kafka_2.13-2.5.0\bin\windows>
 
 Step1: .\zookeeper-server-start.bat ..\..\config\zookeeper.properties
 Step2: .\kafka-server-start.bat ..\..\config\server.properties
